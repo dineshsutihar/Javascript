@@ -65,3 +65,25 @@ console.log("1"+2); // concatenation : output => 12
 console.log(1+"2"); // addition  : output => 12
 console.log(1+2+"3"); // addition  : output => 33
 console.log("1"+2+3); // concatenation : output => 123
+
+
+console.log("*******************************************************");
+
+console.log(+true); // unary plus operator : output => 1
+console.log(+false); // unary plus operator : output => 0
+console.log(-true); // unary minus operator : output => -1
+console.log(-false); // unary minus operator : output => -0
+
+let num1, num2, num3;
+num1 =num2 =num3 = 3; // dont do this in real time
+
+let gameCounter =100;
+gameCounter++;
+console.log(gameCounter); // output => 101
+
+gameCounter--;
+console.log(gameCounter); // output => 100
+
+console.log("*******************************************************");
+
+// link to study form MDN : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence

@@ -38,3 +38,30 @@ let someNumber = 33;
 let stringNumber = String(someNumber); // String() => converts a value to string
 console.log(typeof stringNumber); // returns string if the value can be converted to string else returns false
 console.log(stringNumber); // returns string
+
+
+console.log("*******************************************************");
+// **************** Operaions ******************************
+
+let value = 3;
+let negValue =-value;
+console.log(negValue);
+
+console.log(2+2); // addition
+console.log(2-2); // subtraction
+console.log(2*2); // multiplication
+console.log(2/2); // division
+console.log(2%2); // modulus
+console.log(2**2); // exponentiation
+
+console.log("*******************************************************");
+
+let str1 = "Hello ";
+let str2 = "Dinesh";
+let str3 = str1 + str2;
+console.log(str3);
+
+console.log("1"+2); // concatenation : output => 12
+console.log(1+"2"); // addition  : output => 12
+console.log(1+2+"3"); // addition  : output => 33
+console.log("1"+2+3); // concatenation : output => 123

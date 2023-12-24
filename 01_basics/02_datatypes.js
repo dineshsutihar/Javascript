@@ -19,3 +19,50 @@ console.log(typeof name); // returns string
 console.log(typeof null); // returns object which is a bug in JS
 console.log(typeof undefined); // returns undefined
 
+// Primitive data types => these are the data types which are not objects and have no methods
+// = 7 data types
+// String
+// Number
+// Boolean
+// null
+// undefined
+// Symbol
+// BigInt
+
+// example of primitive data types
+let str = "Hello";
+let num = 33;
+let bool = true;
+let nul = null;
+let undef = undefined;
+let sym = Symbol("id");
+let bigInt = 1234567890123456789012345678901234567890n;
+
+
+// Non primitive data types => these are the data types which are objects and have methods
+
+// Object
+// Array
+// Function
+// Date
+// RegExp => Regular Expression
+
+
+// example of non primitive data types
+let obj = {
+    name: "Dinesh",
+    skill: "JavaScript"
+
+};
+
+let arr = [ "Dinesh", "JavaScript"];
+
+let func = function () {
+    return "Hello";
+ };
+
+let date = new Date();
+let regExp = /w+/g;
+
+
+console.log(typeof regExp);

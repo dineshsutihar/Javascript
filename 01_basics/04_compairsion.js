@@ -46,3 +46,5 @@ console.log("02" != 2); // false
 
 
 // Dont use these kind of operators which are not clear and created confusion.
+
+

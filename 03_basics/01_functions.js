@@ -35,3 +35,37 @@ function loginUserMessage(username="Guest"){ // default value for username
 }
 console.log(loginUserMessage("Dinesh"));
 
+
+// Shopping cart arguiements where we dont know how many arguments will be passed
+
+function shoppingCart(...items){ // ...items is called rest operator here it is rest but other place it is called spread operator
+    return items; // returns an array
+}
+
+console.log(shoppingCart("Milk","Bread","Eggs","Butter"));
+
+
+const user={
+    name:"Dinesh",
+    age:30,
+    address:"Bangalore"
+}
+
+function handleObject(anyObject){
+    console.log(`Name: ${anyObject.name} and his age is ${anyObject.age}`);
+}
+
+handleObject(user); // passing object as an argument
+handleObject({
+    name:"umesh",
+    age:20,
+    address:"Nepal"
+})
+
+const myNewArray = ["Dinesh","Umesh","Ramesh","Suresh"];
+
+function returnSecondValue(array){
+    return array[1];
+}
+
+console.log(returnSecondValue(myNewArray));// passing array as an argument

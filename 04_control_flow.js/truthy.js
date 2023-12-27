@@ -24,6 +24,18 @@ if(Object.keys(emptyObj).length===0){
 // Nullish Coaliescing Operator (??): null undefined
 
 let val1;
-val1= 5 ?? 10;
+// val1= 5 ?? 10;
 
-console.log(val1);
+// val1 = null ?? 10; // check if val1 is null or undefined, if yes then assign 10 to val1
+
+console.log(val1); // 5
+
+var1 = undefined ?? 10; // check if val1 is null or undefined, if yes then assign 10 to val1
+// upper line will return underfined
+
+
+// ternary operator
+// condition ? true : false
+
+const iceTeaPrice = 10;
+iceTeaPrice>=10 ? console.log("I will buy ice tea") : console.log("I will not buy ice tea")

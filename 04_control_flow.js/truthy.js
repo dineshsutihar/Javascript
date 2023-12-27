@@ -8,4 +8,15 @@ if(userEmail){  //we are assuming that userEmail is true
 
 
 // falsy values=> false, 0,-0,BigInt0n, "", null, undefined, NaN.
-// truthy values=> true, 1, " ", [], {}, "anything"
+// truthy values=> true, 1, " ", [], {}, "anything",function(){},
+
+
+if(userEmail.length===0){  
+    console.log("Email is empty")
+}
+
+const emptyObj = {}
+
+if(Object.keys(emptyObj).length===0){  
+    console.log("Object is empty")
+}

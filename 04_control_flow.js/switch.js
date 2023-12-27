@@ -1,6 +1,6 @@
 //  Switch case in javascript
 
-const month = 3;
+const month = 1;
 switch (month) {
     case 1: 
         console.log('January');

@@ -22,6 +22,18 @@ function checkGuess(){
 //
 }
 
-function displayMessage(guess){
+function displayMessage(message){
+//
+}
+
+function displayMessage(message){
+//
+}
+
+function newGame(){
+//
+}
+
+function endGame(){
 //
 }

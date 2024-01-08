@@ -39,6 +39,7 @@ function validateGuess(guess){
             displayGuesses(guess);
             checkGuess(guess);
         }
+    }
 }
 
 function checkGuess(){

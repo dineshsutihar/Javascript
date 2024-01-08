@@ -43,7 +43,14 @@ function validateGuess(guess){
 }
 
 function checkGuess(){
-//
+    if(guess === randomNumber){
+        displayMessage(`You guessed correctly!`);
+        endGame();
+    } else if (guess < randomNumber) {
+        displayMessage(`Too low! Try again!`);
+    } else if (guess > randomNumber) {
+        displayMessage(`Too High! Try again!`);
+    }
 }
 
 function displayMessage(message){

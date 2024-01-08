@@ -69,5 +69,11 @@ function newGame(){
 }
 
 function endGame(){
-//
+    userInput.value = '';
+    userInput.setAttribute('disabled','');
+    p.classList.add('button');
+    p.innerHTML = `<h2 id="newGame"> Start New Game </h2>`;
+    startOver.appendChild(p);
+    playGame = false;
+    newGame();
 }

@@ -5,7 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
 </head>
-<body>
-    
+<body id="images">
+    <!-- Images  -->
+    <img src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="owl" id="owl">
+    <img src="https://images.unsplash.com/photo-1593642532452-9d5c0b2b8b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="owl">
+    <img src="https://images.unsplash.com/photo-1593642532452-9d5c0b2b8b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="owl">
+
 </body>
+
+<script>
+    // attachEvent
+    // jQuery - on
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, offsetX, offsetY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, metaKey, keyCode
+
+
+    // event propagation
+    // bubbling - default- false, capturing
+    document.getElementById('images').addEventListener('click',(e)=>{
+        console.log("clicked inside the images")
+    }, false)
+
+    document.getElementById('owl').addEventListener('click',(e)=>{
+        console.log("clicked owl")
+    }, false)
+
+    
+    
+    
+</script>
 </html>

@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
-</head>
-<body >
+  </head>
+  <body>
     <h2>Amazing images</h2>
     <div>
-        <ul id="images">
-            <li><img src="https://hips.hearstapps.com/hmg-prod/images/cute-baby-animals-1558535060.jpg?crop=1.00xw:0.669xh;0,0.158xh&resize=1200:*" alt="dog" id="dog"></li>
-            <li><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-baby-animals-1558535060.jpg?crop=1.00xw:0.669xh;0,0.158xh&resize=1200:*" alt="cat" id="cat"></li>
-            <li><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-baby-animals-1558535060.jpg?crop=1.00xw:0.669xh;0,0.158xh&resize=1200:*" alt="owl" id="owl"></li>
-            <!-- google in li and ancher tag -->
+      <ul id="images">
+        <li>
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/cute-baby-animals-1558535060.jpg?crop=1.00xw:0.669xh;0,0.158xh&resize=1200:*"
+            alt="dog"
+            id="dog"
+          />
+        </li>
+        <li>
+          <img
+            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-baby-animals-1558535060.jpg?crop=1.00xw:0.669xh;0,0.158xh&resize=1200:*"
+            alt="cat"
+            id="cat"
+          />
+        </li>
+        <li>
+          <img
+            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-baby-animals-1558535060.jpg?crop=1.00xw:0.669xh;0,0.158xh&resize=1200:*"
+            alt="owl"
+            id="owl"
+          />
+        </li>
+        <!-- google in li and ancher tag -->
 
-            <li>
-                <a href="https://www.google.com/" target="_blank" id="google">Google</a>
-            </li>
-            
-
-        </ul>
+        <li>
+          <a href="https://www.google.com/" target="_blank" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
     </div>
+  </body>
 
-</body>
-
-<script>
+  <script>
     // attachEvent
     // jQuery - on
     // type, timestamp, defaultPrevented
@@ -32,26 +49,37 @@
     // clientX, clientY, offsetX, offsetY, screenX, screenY
     // altKey, ctrlKey, shiftKey, metaKey, keyCode
 
-
     // event propagation
     // bubbling - default- false - buttom to up , capturing - true - top to bottom
-    document.getElementById('images').addEventListener('click',(e)=>{
-        console.log("clicked inside the images")
-    }, false)
+    // document.getElementById('images').addEventListener('click',(e)=>{
+    //     console.log("clicked inside the images")
+    // }, false)
 
-    document.getElementById('owl').addEventListener('click',(e)=>{
-        console.log("clicked owl")
-        e.stopPropagation() // stop bubbling
-    }, false)
-    
-    // Prevent default
-    document.getElementById('owl').addEventListener('click',(e)=>{
-        e.preventDefault()
-        e.stopPropagation() // stop bubbling
-        console.log("clicked owl")
-    }, false)
-    
-    
-    
-</script>
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     console.log("clicked owl")
+    //     e.stopPropagation() // stop bubbling
+    // }, false)
+
+    // // Prevent default
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     e.preventDefault()
+    //     e.stopPropagation() // stop bubbling
+    //     console.log("clicked owl")
+    // }, false)
+
+    // reallife scenario
+    document.querySelector("#images").addEventListener(
+      "click",
+      (e) => {
+        console.log(e.target.parentNode);
+
+        if (e.target.tagName === "IMG") {
+          let removeIt = e.target.parentNode;
+          // removeIt.remove()
+          removeIt.parentNode.removeChild(removeIt);
+        }
+      },
+      false
+    );
+  </script>
 </html>

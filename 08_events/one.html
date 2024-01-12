@@ -23,15 +23,22 @@
 
 
     // event propagation
-    // bubbling - default- false, capturing
+    // bubbling - default- false - buttom to up , capturing - true - top to bottom
     document.getElementById('images').addEventListener('click',(e)=>{
         console.log("clicked inside the images")
     }, false)
 
     document.getElementById('owl').addEventListener('click',(e)=>{
         console.log("clicked owl")
+        e.stopPropagation() // stop bubbling
     }, false)
-
+    
+    // Prevent default
+    document.getElementById('owl').addEventListener('click',(e)=>{
+        e.preventDefault()
+        e.stopPropagation() // stop bubbling
+        console.log("clicked owl")
+    }, false)
     
     
     

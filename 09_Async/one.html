@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // 2 sec delay execute the function 1 time
+    setTimeout(function(){ 
+        console.log("Dinesh");
+    }, 2000)
+
+    const sayDinesh = function(){
+        console.log("Dinesh");
+    }
+    setTimeout(sayDinesh, 2000)
+
+// changing the text of h1
+    const changeText = function(){
+        const h1 = document.querySelector("h1");
+        h1.innerText = "Dinesh";
+    }
+    setTimeout(changeText, 2000)
+
+
+</script>
+</html>

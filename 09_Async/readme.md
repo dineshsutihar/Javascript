@@ -15,3 +15,5 @@ By default javascript comes
 |---------------|-------------------|
 | Block the flow of program | Does not block execution |
 | Read the sunc | Read file Async|
+
+![Alt text](image.png)

@@ -11,14 +11,15 @@ const randomColor = () => {
 
 let intervalId;
 const startChangingColor = () => {
-
-   intervalId= setInterval(chnageBgColor, 1000)
+    if(!intervalId) intervalId = setInterval(chnageBgColor, 1000); // to avoid multiple intervals and doing by using if statement
+   
     function chnageBgColor() {
         document.body.style.backgroundColor = randomColor();
     }
 };
 const stopChangingColor = () => {
     clearInterval(intervalId);
+    intervalId = null; // to stop the interval and cleanup the project and memory spaces
 };
 
 document.querySelector("#start").addEventListener("click", startChangingColor);

@@ -16,5 +16,6 @@ window.addEventListener('keydown', (event) => {
   </tr>
   
 </table>
-    </div>` ;
+    </div>
+    ` ;
 });

@@ -7,28 +7,31 @@
 </head>
 <body>
     <h1>File 2 </h1>
-    <button id="start"></button>
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
     // setInterval
-//     const sayDate = (str)=> {
-//         console.log(str, "Dinesh", Date.now);
-//     }
+    const sayDate = (str)=> {
+        console.log(str, "Dinesh", Date.now);
+    }
 
 //     // clearInterval
 //    clearInterval(intervalId);
 
 //    Task 1
+
+let intervalId;
 document.querySelector("#start").addEventListener("click", ()=> {
-    const intervalId = setInterval(sayDate, 1000, "Hello")
+     intervalId = setInterval(sayDate, 1000, "Hello")
 })
 
 document.querySelector("#stop").addEventListener("click", ()=> {
-    clearInterval(intervalId);
+    clearInterval(intervalId)
 })
 
 // Task 2
+
 
 
 </script>

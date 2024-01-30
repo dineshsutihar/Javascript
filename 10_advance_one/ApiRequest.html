@@ -46,7 +46,14 @@
 
         xhr.onreadystatechange = function(){
             console.log(xhr.readyState);  // 0,1,2,3,4 states
+            if(xhr.readyState === 4){
+
+                const data = JSON.parse(this.responseText) // convert json to object
+                console.log(data.followers);
+            }
         }
+
+        // Task assigned : make a card from the data use profile pic from json and then give a buttom on the screen to make a card it user clicks on it then card will be created.
 
         // console.log(xhr.readyState);
         xhr.send();
